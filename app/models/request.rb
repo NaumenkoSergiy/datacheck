@@ -1,3 +1,3 @@
 class Request < ActiveRecord::Base
-  belong_to :code
+  belongs_to :code
 end
