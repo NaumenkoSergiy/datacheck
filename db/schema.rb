@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207104600) do
+ActiveRecord::Schema.define(version: 20150207105625) do
+
+  create_table "orders", force: true do |t|
+    t.string  "number"
+    t.integer "count"
+    t.integer "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
