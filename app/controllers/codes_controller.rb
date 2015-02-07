@@ -1,5 +1,6 @@
 class CodesController < ApplicationController
   before_action :set_code, only: [:show, :edit, :update, :destroy]
+  before_filter :define_service
 
   # GET /codes
   # GET /codes.json
@@ -61,6 +62,14 @@ class CodesController < ApplicationController
     end
   end
 
+  def check
+    @response = @service.check params[:id]
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_code
@@ -70,5 +79,9 @@ class CodesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def code_params
       params[:code]
+    end
+
+    def define_service
+      @service ||= CodeService.new
     end
 end

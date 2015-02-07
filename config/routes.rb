@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :code_types
   resources :orders
   resources :requests
+
+  get 'codes/check'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
