@@ -63,7 +63,7 @@ class CodesController < ApplicationController
   end
 
   def check
-    @response = @service.check params[:id]
+    @response = @service.check params[:code]
 
     respond_to do |format|
       format.js
