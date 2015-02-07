@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /orders
   # GET /orders.json
@@ -24,7 +25,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+    @order = current_user.orders.new(order_params)
 
     respond_to do |format|
       if @order.save
@@ -69,6 +70,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params[:order]
+      params[:order].permit!
     end
 end

@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <%= f.label 'Код' %>
+  <%= f.text_field :code %>
+
+  <%= hidden_field_tag :order_id, params[:order_id] %>
   <div class="actions">
     <%= f.submit %>
   </div>

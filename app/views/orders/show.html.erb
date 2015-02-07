@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+Номер: <%= @order.number %>
+Количество: <%= @order.count %>
+
+<%= link_to 'Коды этого заказа', codes_path(order_id: @order.id) %> |
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

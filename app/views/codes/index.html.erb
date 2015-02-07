@@ -1,4 +1,17 @@
-<%= form_tag codes_check_path, remote: true do %>
-	<%= text_field_tag :code %>
-	<%= submit_tag 'Проверить' %>
+<% if params[:order_id] %>
+  <h1>Listing codes</h1>
+
+  <% @codes.each do |code| %>
+      <%= code.code %>
+      <%= link_to 'Show', code %>
+      <%= link_to 'Edit', edit_code_path(code) %>
+      <%= link_to 'Destroy', code, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+
+  <%= link_to 'New code', new_code_path(order_id: params[:order_id]) %>
+<% else %>
+  <%= form_tag codes_check_path, remote: true do %>
+    <%= text_field_tag :code %>
+    <%= submit_tag 'Проверить' %>
+  <% end %>
 <% end %>

@@ -1,11 +1,13 @@
 class CodesController < ApplicationController
   before_action :set_code, only: [:show, :edit, :update, :destroy]
   before_filter :define_service
+  before_action :authenticate_user!
 
   # GET /codes
   # GET /codes.json
   def index
-    @codes = Code.all
+    order = Order.find(params[:order_id] || 1)
+    @codes = order.try(:codes)
   end
 
   # GET /codes/1
@@ -25,7 +27,8 @@ class CodesController < ApplicationController
   # POST /codes
   # POST /codes.json
   def create
-    @code = Code.new(code_params)
+    order = Order.find(params[:order_id])
+    @code = order.codes.new(code_params)
 
     respond_to do |format|
       if @code.save
@@ -78,7 +81,7 @@ class CodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def code_params
-      params[:code]
+      params[:code].permit!
     end
 
     def define_service
