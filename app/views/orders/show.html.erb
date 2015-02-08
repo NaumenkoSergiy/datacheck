@@ -8,9 +8,9 @@
   <dd><%= @order.number %></dd>
   <dt><strong><%= model_class.human_attribute_name(:count) %>:</strong></dt>
   <dd><%= @order.count %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @order.user_id %></dd>
 </dl>
+
+<%= link_to 'Коды этого заказа', codes_path(order_id: @order.id), class: 'btn btn-default' %>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               orders_path, :class => 'btn btn-default'  %>
