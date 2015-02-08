@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Code.create()
 Order.create()
+
+User.create(email: 'admin@example.com', password: '12345678', admin: true)
