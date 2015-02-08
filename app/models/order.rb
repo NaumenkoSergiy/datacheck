@@ -7,6 +7,8 @@ class Order < ActiveRecord::Base
   private
 
   def code_create
-    codes.create(code: rand(999999999999))
+    (count || 1).times do
+      codes.create(code: rand(100000000000..999999999999))
+    end
   end
 end
