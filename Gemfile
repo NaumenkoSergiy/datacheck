@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'pry'
+gem 'pg'
 
 gem 'twitter-bootstrap-rails'
 
