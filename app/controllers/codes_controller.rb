@@ -6,8 +6,12 @@ class CodesController < ApplicationController
   # GET /codes
   # GET /codes.json
   def index
-    order = Order.find(params[:order_id] || 1)
-    @codes = order.try(:codes)
+    if params[:order_id]
+      order = Order.find(params[:order_id])
+      @codes = order.try(:codes)
+    else
+      @codes = Code.all
+    end
   end
 
   # GET /codes/1
