@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :code_types
   resources :orders
   resources :requests
+  resources :users
 
   post 'codes/check'
 
