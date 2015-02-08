@@ -2,11 +2,11 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_many :codes
 
-  after_create :create_code
+  after_create :code_create
 
   private
 
-  def create_code
+  def code_create
     codes.create(code: rand(999999999999))
   end
 end
