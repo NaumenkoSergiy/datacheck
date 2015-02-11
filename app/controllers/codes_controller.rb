@@ -1,7 +1,7 @@
 class CodesController < ApplicationController
   before_action :set_code, only: [:show, :edit, :update, :destroy]
   before_filter :define_service
-  before_action :authenticate_user!
+  before_filter :authenticate_user!, except: :check
 
   # GET /codes
   # GET /codes.json

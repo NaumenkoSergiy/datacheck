@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-modal-bs3patch
+ *= require bootstrap-modal
  */
+
+.modal-dialog {
+  width: 500px;
+  margin-top: 0px;
+}

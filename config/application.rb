@@ -21,5 +21,6 @@ module Datacheck
     # config.i18n.default_locale = :de
 
     Rails.application.config.assets.precompile += %w( admin )
+    config.autoload_paths << Rails.root.join("lib")
   end
 end

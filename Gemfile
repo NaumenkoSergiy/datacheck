@@ -30,6 +30,8 @@ gem 'pg'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'bootstrap-modal-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
