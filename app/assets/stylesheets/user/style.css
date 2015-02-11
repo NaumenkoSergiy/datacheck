@@ -832,7 +832,7 @@ iframe {
 
 /* HERO LAYOUT: FULLSCREEN SUBSCRIPTION FORM */
 .hero-layout-fullscreen-subscription-form .section-background-image {
-	background-image: url(hero-bg--center-headline-with-subscription-form.jpg);
+	background-image: url('../hero-bg--center-headline-with-subscription-form.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.5;
@@ -893,7 +893,7 @@ iframe {
 
 /* HERO LAYOUT: FEATURES AND FORM */
 .hero-layout-features-and-form .section-background-image {
-	background-image: url(hero-bg--features-with-form.jpg);
+	background-image: url('../hero-bg--features-with-form.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.2;
@@ -901,7 +901,7 @@ iframe {
 
 /* HERO LAYOUT: VIDEO AND FORM */
 .hero-layout-video-and-form .section-background-image {
-	background-image: url(hero-bg--video-with-form.jpg);
+	background-image: url('../hero-bg--video-with-form.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.2;
@@ -916,7 +916,7 @@ iframe {
 
 /* HERO LAYOUT: VIDEO AND FEATURES CTA */
 .hero-layout-video-and-features-cta .section-background-image {
-	background-image: url(hero-bg--video-with-features-cta.jpg);
+	background-image: url('../hero-bg--video-with-features-cta.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.2;
@@ -1103,7 +1103,7 @@ iframe {
  * ========================================
  */
 .numbers-section .section-background-image {
-	background-image: url(numbers-bg.jpg);
+	background-image: url('../numbers-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.2;
@@ -1224,7 +1224,7 @@ iframe {
  * ========================================
  */
 .two-cols-description-image {
-	background-image: url(two-cols-description-bg.jpg);
+	background-image: url('../two-cols-description-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 37.5%;
