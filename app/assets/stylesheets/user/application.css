@@ -24,3 +24,8 @@
 .two-cols-description-section.section-accent {
   background-color: #f3ae73;
 }
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
