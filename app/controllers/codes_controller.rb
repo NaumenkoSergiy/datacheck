@@ -1,6 +1,7 @@
 class CodesController < ApplicationController
   before_action :set_code, only: [:show, :edit, :update, :destroy]
   before_filter :define_service
+  skip_before_filter :verify_authenticity_token
   # before_filter :authenticate_user!, except: :check
 
   # GET /codes

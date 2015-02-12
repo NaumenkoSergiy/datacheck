@@ -87,7 +87,7 @@
 		 * Preloader
 		 * =======================================
 		 */
-		if ( $.fn.jpreLoader() && $( 'body' ).hasClass( 'enable-preloader' ) ) {
+		if ( $.fn.jpreLoader && $( 'body' ).hasClass( 'enable-preloader' ) ) {
 			var $body = $( 'body' );
 
 			$body.jpreLoader({
