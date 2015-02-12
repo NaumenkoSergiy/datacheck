@@ -25,7 +25,7 @@
   background-color: #f3ae73;
 }
 
-html, body {
-  max-width: 100%;
+body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
