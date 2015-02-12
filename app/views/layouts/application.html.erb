@@ -8,7 +8,7 @@
 <head>
   <title>Datacheck</title>
   <%= stylesheet_link_tag "user/application", :media => "all" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'user/application' %>
   <%= csrf_meta_tags %>
   <!-- TODO: To get rid of hardcoded resources -->
   <meta charset="utf-8">
@@ -18,7 +18,11 @@
   <meta name="keywords" content="responsive, parallax, bootstrap, html5 template, one page, landing page">
   <meta name="description" content="Drew - A Multipurpose Landing Page Template">
   <!-- FAVICONS -->
-
+  <!-- FAVICONS -->
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
 </head>
 <body class="enable-animations enable-preloader">
   <!-- modal -->
@@ -778,6 +782,15 @@
       </section>
     
     </div>
-    
+        <!-- JAVASCRIPT
+    ================================= -->
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/jpreloader.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="js/jquery.nav.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
