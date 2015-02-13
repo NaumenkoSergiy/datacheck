@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :requests
   resources :users
+  resources :admin, only: :index
 
   post 'codes/check'
 

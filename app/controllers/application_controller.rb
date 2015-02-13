@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   private
 
   def determine_layout
+    return 'login' if params[:controller] == 'admin'
     is_admin? ? 'admin' : 'application'
   end
 end
