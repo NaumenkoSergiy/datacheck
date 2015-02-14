@@ -1,0 +1,44 @@
+    <section id="hero" class="hero-section hero-layout-simple hero-layout-fullscreen-subscription-form hero-fullscreen section section-dark">
+      <div class="section-background">
+        <!-- IMAGE BACKGROUND -->
+        <div class="section-background-image parallax-background" data-stellar-background-ratio="0.4"></div>
+        <!-- VIDEO BACKGROUND -->
+        <!-- <div class="section-background-video section-background-dot-overlay parallax" data-stellar-ratio="0.4">
+          <video preload="auto" autoplay loop muted poster="images/backgrounds/video-fallback-bg.jpg">
+            <source type="video/mp4" src="videos/video-bg.mp4">
+            <source type="video/ogg" src="videos/video-bg.ogv">
+            <source type="video/webm" src="videos/video-bg.webm">
+          </video>
+        </div> -->
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="hero-heading" data-animation="fadeIn">
+                <h1 class="hero-title">Проверка подлинности товаров</h1>
+                <p class="hero-tagline">Заградотряд ваших репутационных и финансовых потерь</p>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <!-- SUBSCRIPTION FORM -->
+                  <%= form_tag codes_check_path, remote: true, method: :post do %>
+                  <div class="form-group subscription-form-wrapper">
+                    <span class="subscription-form-input">
+                      <input name="code" id="scode" class="code form-control form-control-lg" placeholder="Введите код" autocomplete="off">
+                    </span>
+                    <span class="subscription-form-submit">
+                    <%= submit_tag 'Проверить', class: "btn btn-primary btn-lg", 'data-loading-text' => "Action Button" %>
+                    </span>
+                  </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- HERO START LINK -->
+      <a href="#headline" class="hero-start-link anchor-link"><span class="fa fa-angle-double-down"></span></a>
+    </section>
