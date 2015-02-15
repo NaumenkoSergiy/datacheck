@@ -20,10 +20,11 @@
           <li class="nav-header">
             <div class="dropdown profile-element">
               <span>
-                <%= image_tag 'profile_small.jpg' %>
+                <%= image_tag 'profile_small.jpg', class: 'img-circle' %>
               </span>
               <span class="clear"> <span class="block m-t-xs">
                 <strong class="font-bold"><%= current_user.email %></strong>
+                <span class="text-muted text-xs block">Пользователь</span>
               </span> 
             </div>
             <div class="logo-element">
